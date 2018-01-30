@@ -30,19 +30,43 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
       _esc,     _A,         _S,      _D,      _F,    _G,
    _shiftL,     _Z,         _X,      _C,      _V,    _B,
      _ctrlL, _altL,    _insert,       0,       0,
-                                                      0,    1,
+                                                      0,    0,
                                                             0,
-                                            _space,   0,
+                                            _space,   1,
                                                             0,
 // right hand
         _6,      _7,      _8,      _9,         _0,        _bs,
         _Y,      _U,      _I,      _O,         _P, _backslash,
         _H,      _J,      _K,      _L, _semicolon,     _quote,
-        _N,      _M,  _comma, _period,     _slash,          0,
+        _N,      _M,  _comma, _period,     _slash,          1,
                   0, _arrowL, _arrowD,    _arrowU,    _arrowR,
-     1, 0,
+     0, 0,
      0,
         _enter,      _bs,
+     0                   ),
+
+	KB_MATRIX_LAYER(  // layout: layer 1: symbols
+// unused
+0,
+// left hand
+         0,      0,          0,       0,         0,           0,
+         0,     _grave, _grave,  _equal,     _dash,  _semicolon,
+         0,     _1,         _2,      _3,        _4,          _5,
+         0,      0,          0,  _quote, _bracketL,   _bracketR,
+         0,      0,          0,       0,       0,
+                                                      0,    1,
+                                                            0,
+                                                 0,   0,
+                                                            0,
+// right hand
+         0,         0,          0,       0,          0,           0,
+         0,    _quote,      _dash,  _equal, _backslash,  _backslash,
+         0,        _6,         _7,      _8,         _9,          _0,
+         0, _bracketL,  _bracketR,  _comma,    _period,      _slash,
+                    0,          0,       0,          0,           0,
+     1,   0,
+     0,
+          0,   0,
      0                   ),
 
 };
@@ -103,20 +127,47 @@ NULL,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel,   NULL,   NULL,
-                                                 NULL, dbtldr,
+                                                 NULL,   NULL,
                                                          NULL,
-                                        kprrel,  NULL,
+                                        kprrel,  lpush1,
                                                          NULL,
 // right hand
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-    kprrel, kprrel, kprrel, kprrel, kprrel,   NULL,
+    kprrel, kprrel, kprrel, kprrel, kprrel, lpush1,
             kprrel, kprrel, kprrel, kprrel, kprrel,
- dbtldr, NULL,
+   NULL, NULL,
    NULL,
          kprrel, kprrel,
    NULL ),
+
+	KB_MATRIX_LAYER(  // press: layer 1: symbols 
+// unused
+NULL,
+// left hand
+         NULL,      NULL,      NULL,      NULL,      NULL,      NULL,
+         NULL,    kprrel,   sshprre,   sshprre,   sshprre,   sshprre,
+         NULL,   sshprre,   sshprre,   sshprre,   sshprre,   sshprre,
+         NULL,      NULL,      NULL,   sshprre,    kprrel,    kprrel,
+         NULL,      NULL,      NULL,      NULL,      NULL,
+
+                                                     NULL,   dbtldr,
+                                                               NULL,
+                                             NULL,   NULL,
+                                                               NULL,
+
+    NULL,      NULL,      NULL,      NULL,      NULL,      NULL,
+  kprrel,    kprrel,    kprrel,   sshprre,    kprrel,      NULL,
+ sshprre,   sshprre,   sshprre,   sshprre,   sshprre,      NULL,
+ sshprre,   sshprre,   sshprre,   sshprre,   sshprre,      NULL,
+               NULL,      NULL,      NULL,      NULL,      NULL,
+
+  dbtldr,      NULL,
+    NULL,
+               NULL,      NULL,
+    NULL
+ ),
 
 };
 
@@ -136,18 +187,45 @@ NULL,
     kprrel, kprrel, kprrel,   NULL,   NULL,
                                                  NULL,   NULL,
                                                          NULL,
-                                        kprrel,  NULL,
+                                        kprrel,  lpop1,
                                                          NULL,
 // right hand
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
     kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-    kprrel, kprrel, kprrel, kprrel, kprrel,   NULL,
+    kprrel, kprrel, kprrel, kprrel, kprrel,  lpop1,
             kprrel, kprrel, kprrel, kprrel, kprrel,
    NULL, NULL,
    NULL,
          kprrel, kprrel,
    NULL ),
+
+	KB_MATRIX_LAYER(  // press: layer 1: symbols 
+// unused
+NULL,
+// left hand
+         NULL,      NULL,      NULL,      NULL,      NULL,      NULL,
+         NULL,    kprrel,   sshprre,   sshprre,   sshprre,   sshprre,
+         NULL,   sshprre,   sshprre,   sshprre,   sshprre,   sshprre,
+         NULL,      NULL,      NULL,   sshprre,    kprrel,    kprrel,
+         NULL,      NULL,      NULL,      NULL,      NULL,
+
+                                                     NULL,     NULL,
+                                                               NULL,
+                                             NULL,   NULL,
+                                                               NULL,
+
+    NULL,      NULL,      NULL,      NULL,      NULL,      NULL,
+  kprrel,    kprrel,    kprrel,   sshprre,    kprrel,      NULL,
+ sshprre,   sshprre,   sshprre,   sshprre,   sshprre,      NULL,
+ sshprre,   sshprre,   sshprre,   sshprre,   sshprre,      NULL,
+               NULL,      NULL,      NULL,      NULL,      NULL,
+
+    NULL,      NULL,
+    NULL,
+               NULL,      NULL,
+    NULL
+ ),
 
 };
 
