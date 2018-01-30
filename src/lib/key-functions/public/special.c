@@ -39,7 +39,7 @@
  *   keyrelease
  */
 void kbfun_shift_press_release(void) {
-	_kbfun_press_release(IS_PRESSED, KEY_LeftShift);
+	_kbfun_press_release(IS_PRESSED, KEY_RightShift);
 	kbfun_press_release();
 }
 
