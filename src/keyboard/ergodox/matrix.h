@@ -66,10 +66,10 @@
 			    k28,k29,k2A,k2B,k2C,k2D,		\
 			    k38,k39,k3A,k3B,k3C,k3D,		\
 			        k49,k4A,k4B,k4C,k4D,		\
-			k59,k58,					              \
-			k5A,  					                \
-			    k5C,k5D,					          \
-			k5B                   )					\
+			k5C,k5D,					              \
+			k5B,  					                \
+			    k59,k58,					          \
+			k5A                   )					\
 									                    \
 	/* matrix positions */						  \
 	{{ k00,k01,k02,k03,k04,k05, na, na,k08,k09,k0A,k0B,k0C,k0D },	\
